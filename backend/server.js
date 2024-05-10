@@ -2,14 +2,14 @@ import express from "express";
 import path from "path";
  import cors from "cors";
 import mongoose from "mongoose";
-import dotenv from "dotenv";
+import { config } from 'dotenv';
 import seedRouter from "./routes/seedRoutes.js";
 import productRouter from "./routes/productRoutes.js";
 import userRouter from "./routes/userRoutes.js";
 import orderRouter from "./routes/orderRoutes.js";
 import uploadRouter from "./routes/uploadRoutes.js";
 
-dotenv.config();
+
 
 mongoose
   .connect(process.env.MONGODB_URI)
